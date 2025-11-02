@@ -10,7 +10,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { toast } from 'sonner';
-import { Calendar, Mail } from 'lucide-react';
+import { Calendar, Github, Mail } from 'lucide-react';
 
 import { useRouter } from 'next/navigation';
 import { ThemeToggle } from '@/components/theme-toggle';
@@ -79,8 +79,22 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-background via-background to-primary/5 p-4">
-      <div className="absolute top-4 right-4">
+      <div className="absolute top-4 right-4 flex items-center gap-2">
         <ThemeToggle />
+         <Button
+        variant="ghost"
+        size="icon"
+        className="rounded-full hover:bg-primary/10 transition"
+        asChild
+      >
+        <a
+          href="https://github.com/Sajid-tech/demanual-ai-event-manager"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github className="h-5 w-5" />
+        </a>
+      </Button>
       </div>
       
       <Card className="w-full max-w-md glass">
